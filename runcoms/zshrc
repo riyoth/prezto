@@ -24,3 +24,7 @@ fi
 if [[ -s "${ZDOTDIR:-$HOME}/env.local" ]]; then
   source "${ZDOTDIR:-$HOME}/env.local"
 fi
+
+# Start SSH agent
+# Keep key in memory for 6 hours
+eval `ssh-agent -t 21600`
