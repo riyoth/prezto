@@ -25,6 +25,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/env.local" ]]; then
   source "${ZDOTDIR:-$HOME}/env.local"
 fi
 
-# Start SSH agent
+# Check if $SSH_AUTH_SOCK exist, if not Start SSH agent
 # Keep key in memory for 6 hours
-eval `ssh-agent -t 21600` > /dev/null 2>&1
+
+[[ ! -v SSH_AUTH_SOCK ]] && eval `ssh-agent -t 21600` 
