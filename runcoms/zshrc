@@ -27,4 +27,4 @@ fi
 
 # Start SSH agent
 # Keep key in memory for 6 hours
-eval `ssh-agent -t 21600`
+eval `ssh-agent -t 21600` > /dev/null 2>&1
