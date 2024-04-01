@@ -25,7 +25,6 @@ if [[ -s "${ZDOTDIR:-$HOME}/env.local" ]]; then
   source "${ZDOTDIR:-$HOME}/env.local"
 fi
 
-# Check if $SSH_AUTH_SOCK exist, if not Start SSH agent
-# Keep key in memory for 6 hours
-
-[[ ! -v SSH_AUTH_SOCK ]] && eval `ssh-agent -t 21600` 
+if [[ -s "${ZDOTDIR:-$HOME}/pyenv" ]]; then
+  source "${ZDOTDIR:-$HOME}/pyenv"
+fi
