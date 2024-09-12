@@ -28,3 +28,6 @@ fi
 if [[ -s "${ZDOTDIR:-$HOME}/pyenv" ]]; then
   source "${ZDOTDIR:-$HOME}/pyenv"
 fi
+if [[ -s "${ZDOTDIR:-$HOME}/nvm" ]]; then
+  source "${ZDOTDIR:-$HOME}/nvm"
+fi
