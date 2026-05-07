@@ -4,7 +4,6 @@
 # Authors:
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
-
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
@@ -30,4 +29,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/pyenv" ]]; then
 fi
 if [[ -s "${ZDOTDIR:-$HOME}/nvm" ]]; then
   source "${ZDOTDIR:-$HOME}/nvm"
+fi
+if [[ -s "${ZDOTDIR:-$HOME}/uv" ]]; then
+  source "${ZDOTDIR:-$HOME}/uv"
 fi
